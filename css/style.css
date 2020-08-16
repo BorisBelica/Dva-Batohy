@@ -1,0 +1,507 @@
+/* _____________________________________ SETTINGS _____________________________________ */
+*, html { box-sizing: border-box; font-size: 1.0rem;}
+*, *:before, *:after { box-sizing: inherit; }
+* { 
+	margin: 0;
+  	padding: 0;
+  	border: 0 none;
+  	position: relative; }
+
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/* 
+--- FONTS ---- 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+
+
+:root {
+
+	--primary-color: white;
+	--background-color: rgba(252, 252, 252, 1);
+	--contrast-color: #2186DE;
+	--text-color: rgba(0, 0, 0, 1);
+
+}
+
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+h1 {
+	font-size: 4.5rem;
+	font-weight: 700;  
+	letter-spacing: 5px;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 700;  
+	letter-spacing: 1px;
+}
+
+.thin {
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 0px;
+	font-size: 2.5rem;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h1 > span {
+	font-size: 3rem;
+	color: var(--contrast-color);
+}
+
+body {
+	 overflow-x: hidden;
+}
+
+/* _____________________________________ SETTINGS  _____________________________________ */
+
+
+
+
+
+
+
+
+
+/* ----------------- HEADER SEKCIA ----------------- */
+
+#HEADER {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	overflow: hidden;
+
+	color: var(--primary-color);
+}
+
+	#HEADER::after {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		z-index: 10;
+		background: rgba(0, 0, 0, 0.3);
+	}
+
+	#HEADER video {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		object-fit: cover;	
+	}
+
+
+	#HEADER .texture {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 15;
+		background: url('../img/texture.png')
+	}
+
+
+	#HEADER .header-content {
+		position: relative;
+		color: red;
+		z-index: 20;
+		text-align: center;
+		color: white;
+	}
+
+		#HEADER .header-content h1 {
+			color: var(--background-color);
+			font-size: 7rem;
+			letter-spacing: 1px;
+			font-family: 'Oswald', sans-serif;
+			margin-bottom: 0.5rem;
+		}
+
+		#HEADER .header-content h2 {
+			color: #007E36;
+			letter-spacing: 3px;
+		}
+
+
+	#HEADER .header-btn {
+	border: 1px solid #007E36;
+	color: white;
+
+	font-size: 2.0rem;
+	padding: 0.8rem 7rem;
+
+	text-decoration: none;
+	cursor: pointer;
+	text-transform: uppercase;
+
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 25;
+
+	margin-top: 2rem;
+	letter-spacing: 3px;
+	font-family: 'Oswald', sans-serif;
+
+
+	display: inline-block;
+	border-radius: 5px;
+	}
+
+		#HEADER .header-btn:hover {
+			background-color: #007E36;
+			transform: scale(0.95);
+		}
+
+	
+/* ----------------- HEADER SEKCIA ----------------- */
+
+.line-bold {
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    margin: 10px auto;
+}
+
+
+#page-wraper {
+	background-color: #a43f49;
+    /* background: url(../images/page-bg.jpg) no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+	
+
+
+
+
+
+#GALLERY {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin: 5vh 5vw;
+}
+
+	.gallery-item {	
+		width: 55vw;
+		height: auto;
+		margin: 1rem 0rem;
+	}
+
+	.gallery-item img {
+		width: 100%;
+		height: auto;
+
+		background-size: cover;
+	}
+
+
+/* ----------------- NEWEST POST----------------- */
+#NEWEST-POST {
+	width: 100%;
+	height: auto;
+
+	display: grid;
+	place-items: center;
+	color: white;
+
+	margin: 0vh 0vw;
+	background-color: white;
+}
+
+	#NEWEST-POST > h2, #SLOVENIA-CONTENT > h2 {
+		font-size: 3rem;
+		margin: 1rem 0rem;
+		color: #00743f;
+		text-align: center;
+	}
+
+	#NEWEST-POST  .line-post {
+		width: 60px;
+	    height: 3px;
+	    background-color: #007E36;
+	    margin: 1.5rem auto;
+	}
+
+	#NEWEST-POST .btn {
+		background-color: #007E36;
+		font-size: 1.5rem;
+		font-family: 'Oswald', sans-serif;
+		border: 1px solid #007E36;
+	}
+
+	#NEWEST-POST > h3 {
+		color: #00743f;
+	}
+	
+
+	#NEWEST-POST .text-head {
+		width: 80%;
+		height: auto;
+
+		line-height: 1.6;
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+		padding-left: 2rem;
+		letter-spacing: 1px;
+		font-family: 'Montserrat', sans-serif;
+		text-align: center;
+		color: black;
+	}
+
+	#NEWEST-POST .text-container {
+		width: 60%;
+		height: 100%;
+		border-left: 1px solid white;
+
+		text-align: center;
+		margin: 1.5rem auto;
+	}
+
+		#NEWEST-POST .text-post {
+			width: 85%;
+			height: auto;
+			color: #00743f;
+
+			line-height: 1.6;
+			font-size: 1.2rem;
+			margin-bottom: 1.5rem;
+			letter-spacing: 1px;
+			font-family: 'Montserrat', sans-serif;
+			text-align: left;
+			display: inline-block;
+			color: black;
+		}
+
+
+	#NEWEST-POST .post-image-info {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 0.75rem;
+		display: inline-block;
+		text-transform: uppercase;
+		color: grey;
+		margin-top: -0.8rem;
+
+	}
+
+	#NEWEST-POST .BOX a, 
+		#SLOVENIA-CONTENT .BOX img {
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+/* ----------------- NEWEST POST----------------- */
+
+
+
+
+/* ----------------- SLOVENIA-CONTENT ----------------- */
+#SLOVENIA-CONTENT {
+	width: 100vw;
+	height: auto;
+	padding: 5rem 0rem;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	background-color: black;
+	color: white;
+}
+
+	#SLOVENIA-CONTENT > h2 {
+		font-size: 3rem;
+		margin: 1rem 0rem;
+		color: #00743f;
+	}
+
+	#SLOVENIA-CONTENT  .line-post {
+		width: 60px;
+	    height: 3px;
+	    background-color: #007E36;
+	    margin: 1.5rem auto;
+	}
+
+	#SLOVENIA-CONTENT > h3 {
+		color: white;
+	}
+
+	#SLOVENIA-CONTENT h2 {
+		font-size: 3rem;
+		margin: 1rem 0rem;
+		color: #00743f;
+	}
+
+
+	#SLOVENIA-CONTENT video {
+		width: 70vw;
+		height: auto;
+		object-fit: cover;
+		z-index: 2;
+		margin: 1rem 0rem;
+	}
+
+		#SLOVENIA-CONTENT .BOX {
+			width: 65vw;
+			height: auto;
+			margin: 1rem 0vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#SLOVENIA-CONTENT .BOX a, 
+		#SLOVENIA-CONTENT .BOX img {
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+			#SLOVENIA-CONTENT .BOX a:hover {
+				opacity: 0.5;
+			}
+
+
+
+		
+/* ----------------- SLOVENIA-CONTENT ----------------- */
+
+
+
+
+
+/* MEDIA / RESPONZIVE */ 
+
+@media (max-width: 1200px) {	
+}
+
+
+@media (max-width: 768px) {
+	#SLOVENIA-CONTENT .BOX {
+			width: 85vw;
+			height: auto;
+			margin: 1rem 0vw;
+		}
+	
+	#HEADER .header-content h1 {
+			color: var(--background-color);
+			font-size: 5rem;
+			letter-spacing: 1px;
+			margin-bottom: 0.5rem;
+		}
+
+}
+
+
+@media (max-width: 576px) {
+
+
+/* HEADER */
+	#HEADER .header-content {
+	}
+
+	#HEADER .header-content h1 {
+			font-size: 3.0rem;
+			letter-spacing: 2px;
+		}
+
+	.thin {
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	}
+
+	#HEADER .header-btn {
+			font-size: 1.2rem;
+			padding: 0.6rem 4rem;
+			margin-top: 2rem;
+			letter-spacing: 2px;
+		}
+
+	#NEWEST-POST > h2, #SLOVENIA-CONTENT > h2 {
+		font-size: 1.8rem;
+	}
+
+	#SLOVENIA-CONTENT video {
+		width: 90vw;
+	}
+
+	#NEWEST-POST  .line-post {
+		width: 60px;
+	    height: 3px;
+	    margin: 0.5rem auto;
+	}
+
+	#NEWEST-POST .text-head {
+		width: 85%;
+		height: auto;
+		line-height: 1.5;
+		font-size: 1.0rem;
+		margin-bottom: 1.0rem;
+		padding-left: 0;
+		letter-spacing: 0px;
+	}
+
+	#NEWEST-POST .text-container {
+		width: 100%;
+		height: auto;
+		border-left: 0px solid white;
+	}
+
+		#NEWEST-POST .text-post {
+			width: 85%;
+			line-height: 1.6;
+			font-size: 1.0rem;
+			letter-spacing: 0px;
+		}	
+
+	#SLOVENIA-CONTENT .BOX {
+			width: 90vw;
+			margin: 1rem 0vw;
+		}
+}		
+/* HEADER */
+

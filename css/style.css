@@ -1,5 +1,5 @@
 /* _____________________________________ SETTINGS _____________________________________ */
-*, html { box-sizing: border-box; font-size: 1.0rem;}
+*, html { box-sizing: border-box; font-size: 1.0rem; scroll-behavior: smooth;}
 *, *:before, *:after { box-sizing: inherit; }
 * { 
 	margin: 0;
@@ -23,25 +23,25 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Oswald', sans-serif;
 */
 
-
 :root {
+	--main-color: #007E36;
+	--bright-color: white;
+	--dark-color: black;
+	--grey-color: grey;
 
-	--primary-color: white;
-	--background-color: rgba(252, 252, 252, 1);
-	--contrast-color: #2186DE;
-	--text-color: rgba(0, 0, 0, 1);
-
+	--head-font: 'Oswald', sans-serif;
+	--text-font: 'Montserrat', sans-serif;
 }
-
+	
 
 h1, h2, h3 {
 	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
+	font-family: var(--head-font);
 }
 
 
 h1 {
-	font-size: 4.5rem;
+	font-size: 5.0rem;
 	font-weight: 700;  
 	letter-spacing: 5px;
 }
@@ -53,11 +53,11 @@ h2 {
 }
 
 .thin {
-	font-family: 'Oswald', sans-serif;
+	font-family: var(--text-font);
 	margin-bottom: 0px;
-	font-size: 2.5rem;
+	font-size: 2.0rem;
 	font-weight: 200;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 }
 
@@ -68,6 +68,11 @@ h1 > span {
 
 body {
 	 overflow-x: hidden;
+}
+
+p, span {
+	font-family: var(--text-font);
+	letter-spacing: 1px;
 }
 
 /* _____________________________________ SETTINGS  _____________________________________ */
@@ -132,14 +137,14 @@ body {
 		color: red;
 		z-index: 20;
 		text-align: center;
-		color: white;
+		color: var(--bright-color);	
 	}
 
 		#HEADER .header-content h1 {
 			color: var(--background-color);
 			font-size: 7rem;
 			letter-spacing: 1px;
-			font-family: 'Oswald', sans-serif;
+			font-family: var(--head-font);
 			margin-bottom: 0.5rem;
 		}
 
@@ -150,31 +155,29 @@ body {
 
 
 	#HEADER .header-btn {
-	border: 1px solid #007E36;
-	color: white;
+	border: 2px solid var(--bright-color);	
+	color: var(--bright-color);	
 
 	font-size: 2.0rem;
-	padding: 0.8rem 7rem;
+	padding: 0.8rem 5rem;
 
 	text-decoration: none;
 	cursor: pointer;
 	text-transform: uppercase;
 
-	background: rgba(0, 0, 0, 0.5);
+	background: var(--main-color);
 	z-index: 25;
 
 	margin-top: 2rem;
-	letter-spacing: 3px;
-	font-family: 'Oswald', sans-serif;
-
-
+	letter-spacing: 1px;
 	display: inline-block;
-	border-radius: 5px;
-	}
+	font-family: var(--head-font);	
+}
 
 		#HEADER .header-btn:hover {
-			background-color: #007E36;
+			background-color: var(--dark-color);
 			transform: scale(0.95);
+			border: 2px dotted var(--bright-color);	
 		}
 
 	
@@ -183,7 +186,7 @@ body {
 .line-bold {
     width: 60px;
     height: 3px;
-    background-color: black;
+    background-color: var(--dark-color);
     margin: 10px auto;
 }
 
@@ -240,35 +243,35 @@ body {
 
 	display: grid;
 	place-items: center;
-	color: white;
+	color: var(--bright-color);	
 
 	margin: 0vh 0vw;
-	background-color: white;
+	background-color: var(--bright-color);	
 }
 
 	#NEWEST-POST > h2, #SLOVENIA-CONTENT > h2 {
 		font-size: 3rem;
 		margin: 1rem 0rem;
-		color: #00743f;
+		color: var(--main-color);
 		text-align: center;
 	}
 
 	#NEWEST-POST  .line-post {
 		width: 60px;
 	    height: 3px;
-	    background-color: #007E36;
+	    background-color: var(--main-color);
 	    margin: 1.5rem auto;
 	}
 
 	#NEWEST-POST .btn {
-		background-color: #007E36;
+		background-color: var(--main-color);
 		font-size: 1.5rem;
-		font-family: 'Oswald', sans-serif;
-		border: 1px solid #007E36;
+		font-family: var(--head-font);
+		border: 1px solid var(--main-color);
 	}
 
 	#NEWEST-POST > h3 {
-		color: #00743f;
+		color: var(--main-color);
 	}
 	
 
@@ -281,16 +284,14 @@ body {
 		margin-bottom: 1.5rem;
 		padding-left: 2rem;
 		letter-spacing: 1px;
-		font-family: 'Montserrat', sans-serif;
 		text-align: center;
-		color: black;
+		color: var(--dark-color);
 	}
 
 	#NEWEST-POST .text-container {
 		width: 60%;
 		height: 100%;
-		border-left: 1px solid white;
-
+		border-left: 1px solid var(--bright-color);	
 		text-align: center;
 		margin: 1.5rem auto;
 	}
@@ -298,21 +299,20 @@ body {
 		#NEWEST-POST .text-post {
 			width: 85%;
 			height: auto;
-			color: #00743f;
+			color: var(--main-color);
 
 			line-height: 1.6;
 			font-size: 1.2rem;
 			margin-bottom: 1.5rem;
 			letter-spacing: 1px;
-			font-family: 'Montserrat', sans-serif;
 			text-align: left;
 			display: inline-block;
-			color: black;
+			color: var(--dark-color);
 		}
 
 
 	#NEWEST-POST .post-image-info {
-		font-family: 'Montserrat', sans-serif;
+		font-family: var(--text-font);
 		font-size: 0.75rem;
 		display: inline-block;
 		text-transform: uppercase;
@@ -322,7 +322,7 @@ body {
 	}
 
 	#NEWEST-POST .BOX a, 
-		#SLOVENIA-CONTENT .BOX img {
+	#SLOVENIA-CONTENT .BOX img {
 			width: 100%;
 			height: auto;
 			display: flex;
@@ -338,7 +338,7 @@ body {
 #SLOVENIA-CONTENT {
 	width: 100vw;
 	height: auto;
-	padding: 5rem 0rem;
+	padding: 1rem 0rem;
 
 	display: flex;
 	flex-direction: column;
@@ -346,31 +346,39 @@ body {
 	justify-content: center;
 	align-items: center;
 
-	background-color: black;
-	color: white;
+	background-color: var(--dark-color);	
+	color: var(--bright-color);	
 }
 
 	#SLOVENIA-CONTENT > h2 {
 		font-size: 3rem;
 		margin: 1rem 0rem;
-		color: #00743f;
+		color: var(--main-color);
 	}
 
 	#SLOVENIA-CONTENT  .line-post {
 		width: 60px;
 	    height: 3px;
-	    background-color: #007E36;
+	    background-color: var(--main-color);
 	    margin: 1.5rem auto;
 	}
 
 	#SLOVENIA-CONTENT > h3 {
-		color: white;
+		color: var(--bright-color);	
+	}
+
+	#SLOVENIA-CONTENT .info-text {
+		text-transform: uppercase;
+		font-size: 1.1rem;
+
+		color: var(--grey-color);
+		text-align: center;
 	}
 
 	#SLOVENIA-CONTENT h2 {
 		font-size: 3rem;
 		margin: 1rem 0rem;
-		color: #00743f;
+		color: var(--main-color);
 	}
 
 
@@ -382,10 +390,22 @@ body {
 		margin: 1rem 0rem;
 	}
 
+	#SLOVENIA-CONTENT .social-media-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;	
+	}
+
+		#SLOVENIA-CONTENT .social-media-box a {
+		margin: 0rem 3rem;
+		padding: 0rem 1.5rem;
+	}
+
 		#SLOVENIA-CONTENT .BOX {
 			width: 65vw;
 			height: auto;
-			margin: 1rem 0vw;
+			margin: 3rem 0vw;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -401,14 +421,41 @@ body {
 			align-items: center;
 		}
 
-			#SLOVENIA-CONTENT .BOX a:hover {
-				opacity: 0.5;
+			#SLOVENIA-CONTENT .BOX a:hover,
+			#SLOVENIA-CONTENT .BOX img:hover {
+				opacity: 0.7;
+				transform: scale(0.99);
 			}
 
-
-
-		
+			#SLOVENIA-CONTENT .post-image-info {
+				margin-top: 0.5rem;
+				width: 80%;
+				height: auto;
+				font-size: 1.4rem;
+				line-height: 2.0;
+				color: var(--bright-color);	
+			}
 /* ----------------- SLOVENIA-CONTENT ----------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------- carousel----------------- */
+
+	#MAIN-CAROUSEL h5 {
+		font-size: 
+	}
+
+
+/* ----------------- carousel ----------------- */
+
 
 
 
@@ -416,7 +463,20 @@ body {
 
 /* MEDIA / RESPONZIVE */ 
 
-@media (max-width: 1200px) {	
+@media (max-width: 1200px) {
+
+#SLOVENIA-CONTENT .social-media-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;	
+	}
+
+		#SLOVENIA-CONTENT .social-media-box a {
+		margin: 0rem 1rem;
+	}
+
+	
 }
 
 
@@ -434,7 +494,22 @@ body {
 			margin-bottom: 0.5rem;
 		}
 
+	#SLOVENIA-CONTENT .social-media-box {
+		flex-direction: column;	
+	}
+
+		#SLOVENIA-CONTENT .social-media-box a {
+		margin-bottom: 1rem;
+		
+	}
+	
+
 }
+
+
+
+
+
 
 
 @media (max-width: 576px) {
@@ -461,6 +536,9 @@ body {
 			letter-spacing: 2px;
 		}
 
+
+
+
 	#NEWEST-POST > h2, #SLOVENIA-CONTENT > h2 {
 		font-size: 1.8rem;
 	}
@@ -468,6 +546,32 @@ body {
 	#SLOVENIA-CONTENT video {
 		width: 90vw;
 	}
+
+	#SLOVENIA-CONTENT .line-post {
+	    margin: 1.0rem auto;
+	}
+
+	#SLOVENIA-CONTENT .info-text {
+		font-size: 0.80rem;
+		margin: 0rem 1rem;
+	}
+
+	#SLOVENIA-CONTENT .BOX a, 
+	#SLOVENIA-CONTENT .BOX img {
+			width: 70vw;
+		}
+
+	#SLOVENIA-CONTENT .post-image-info {
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+				font-size: 1.0rem;
+				line-height: 1.6;
+				letter-spacing: 1px;
+				text-align: center;
+			}	
+
+
+
 
 	#NEWEST-POST  .line-post {
 		width: 60px;
@@ -488,7 +592,7 @@ body {
 	#NEWEST-POST .text-container {
 		width: 100%;
 		height: auto;
-		border-left: 0px solid white;
+		border-left: 0px solid var(--bright-color);	
 	}
 
 		#NEWEST-POST .text-post {

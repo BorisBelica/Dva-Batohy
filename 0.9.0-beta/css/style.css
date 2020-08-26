@@ -1,0 +1,611 @@
+/* _____________________________________ SETTINGS _____________________________________ */
+*, html { box-sizing: border-box; font-size: 1.0rem; scroll-behavior: smooth;}
+*, *:before, *:after { box-sizing: inherit; }
+* { 
+	margin: 0;
+  	padding: 0;
+  	border: 0 none;
+  	position: relative; }
+
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/* 
+--- FONTS ---- 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+
+:root {
+	--main-color: #007E36;
+	--bright-color: white;
+	--dark-color: black;
+	--grey-color: grey;
+
+	--head-font: 'Oswald', sans-serif;
+	--text-font: 'Montserrat', sans-serif;
+}
+	
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	font-family: var(--head-font);
+}
+
+
+h1 {
+	font-size: 5.0rem;
+	font-weight: 700;  
+	letter-spacing: 5px;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 700;  
+	letter-spacing: 1px;
+}
+
+.thin {
+	font-family: var(--text-font);
+	margin-bottom: 0px;
+	font-size: 2.0rem;
+	font-weight: 200;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+h1 > span {
+	font-size: 3rem;
+	color: var(--contrast-color);
+}
+
+body {
+	 overflow-x: hidden;
+}
+
+p, span {
+	font-family: var(--text-font);
+	letter-spacing: 1px;
+}
+
+/* _____________________________________ SETTINGS  _____________________________________ */
+
+
+
+
+
+
+
+
+
+/* ----------------- HEADER SEKCIA ----------------- */
+
+#HEADER {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	overflow: hidden;
+
+	color: var(--primary-color);
+}
+
+	#HEADER::after {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		z-index: 10;
+		background: rgba(0, 0, 0, 0.3);
+	}
+
+	#HEADER video {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		object-fit: cover;	
+	}
+
+
+	#HEADER .texture {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 15;
+		background: url('../img/texture.png')
+	}
+
+
+	#HEADER .header-content {
+		position: relative;
+		color: red;
+		z-index: 20;
+		text-align: center;
+		color: var(--bright-color);	
+	}
+
+		#HEADER .header-content h1 {
+			color: var(--background-color);
+			font-size: 7rem;
+			letter-spacing: 1px;
+			font-family: var(--head-font);
+			margin-bottom: 0.5rem;
+		}
+
+		#HEADER .header-content h2 {
+			color: #007E36;
+			letter-spacing: 3px;
+		}
+
+
+	#HEADER .header-btn {
+	border: 2px solid var(--bright-color);	
+	color: var(--bright-color);	
+
+	font-size: 2.0rem;
+	padding: 0.8rem 5rem;
+
+	text-decoration: none;
+	cursor: pointer;
+	text-transform: uppercase;
+
+	background: var(--main-color);
+	z-index: 25;
+
+	margin-top: 2rem;
+	letter-spacing: 1px;
+	display: inline-block;
+	font-family: var(--head-font);	
+}
+
+		#HEADER .header-btn:hover {
+			background-color: var(--dark-color);
+			transform: scale(0.95);
+			border: 2px dotted var(--bright-color);	
+		}
+
+	
+/* ----------------- HEADER SEKCIA ----------------- */
+
+.line-bold {
+    width: 60px;
+    height: 3px;
+    background-color: var(--dark-color);
+    margin: 10px auto;
+}
+
+
+#page-wraper {
+	background-color: #a43f49;
+    /* background: url(../images/page-bg.jpg) no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+	
+
+
+
+
+
+#GALLERY {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin: 5vh 5vw;
+}
+
+	.gallery-item {	
+		width: 55vw;
+		height: auto;
+		margin: 1rem 0rem;
+	}
+
+	.gallery-item img {
+		width: 100%;
+		height: auto;
+
+		background-size: cover;
+	}
+
+
+/* ----------------- NEWEST POST----------------- */
+#NEWEST-POST {
+	width: 100%;
+	height: auto;
+
+	display: grid;
+	place-items: center;
+	color: var(--bright-color);	
+
+	margin: 0vh 0vw;
+	background-color: var(--bright-color);	
+}
+
+	#NEWEST-POST > h2, #SLOVENIA-CONTENT > h2 {
+		font-size: 3rem;
+		margin: 1rem 0rem;
+		color: var(--main-color);
+		text-align: center;
+	}
+
+	#NEWEST-POST  .line-post {
+		width: 60px;
+	    height: 3px;
+	    background-color: var(--main-color);
+	    margin: 1.5rem auto;
+	}
+
+	#NEWEST-POST .btn {
+		background-color: var(--main-color);
+		font-size: 1.5rem;
+		font-family: var(--head-font);
+		border: 1px solid var(--main-color);
+	}
+
+	#NEWEST-POST > h3 {
+		color: var(--main-color);
+	}
+	
+
+	#NEWEST-POST .text-head {
+		width: 80%;
+		height: auto;
+
+		line-height: 1.6;
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+		padding-left: 2rem;
+		letter-spacing: 1px;
+		text-align: center;
+		color: var(--dark-color);
+	}
+
+	#NEWEST-POST .text-container {
+		width: 60%;
+		height: 100%;
+		border-left: 1px solid var(--bright-color);	
+		text-align: center;
+		margin: 1.5rem auto;
+	}
+
+		#NEWEST-POST .text-post {
+			width: 85%;
+			height: auto;
+			color: var(--main-color);
+
+			line-height: 1.6;
+			font-size: 1.2rem;
+			margin-bottom: 1.5rem;
+			letter-spacing: 1px;
+			text-align: left;
+			display: inline-block;
+			color: var(--dark-color);
+		}
+
+
+	#NEWEST-POST .post-image-info {
+		font-family: var(--text-font);
+		font-size: 0.75rem;
+		display: inline-block;
+		text-transform: uppercase;
+		color: grey;
+		margin-top: -0.8rem;
+
+	}
+
+	#NEWEST-POST .BOX a, 
+	#SLOVENIA-CONTENT .BOX img {
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+/* ----------------- NEWEST POST----------------- */
+
+
+
+
+/* ----------------- SLOVENIA-CONTENT ----------------- */
+#SLOVENIA-CONTENT {
+	width: 100vw;
+	height: auto;
+	padding: 1rem 0rem;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--dark-color);	
+	color: var(--bright-color);	
+}
+
+	#SLOVENIA-CONTENT > h2 {
+		font-size: 3rem;
+		margin: 1rem 0rem;
+		color: var(--main-color);
+	}
+
+	#SLOVENIA-CONTENT  .line-post {
+		width: 60px;
+	    height: 3px;
+	    background-color: var(--main-color);
+	    margin: 1.5rem auto;
+	}
+
+	#SLOVENIA-CONTENT > h3 {
+		color: var(--bright-color);	
+	}
+
+	#SLOVENIA-CONTENT .info-text {
+		text-transform: uppercase;
+		font-size: 1.1rem;
+
+		color: var(--grey-color);
+		text-align: center;
+	}
+
+	#SLOVENIA-CONTENT h2 {
+		font-size: 3rem;
+		margin: 1rem 0rem;
+		color: var(--main-color);
+	}
+
+
+	#SLOVENIA-CONTENT video {
+		width: 70vw;
+		height: auto;
+		object-fit: cover;
+		z-index: 2;
+		margin: 1rem 0rem;
+	}
+
+	#SLOVENIA-CONTENT .social-media-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;	
+	}
+
+		#SLOVENIA-CONTENT .social-media-box a {
+		margin: 0rem 3rem;
+		padding: 0rem 1.5rem;
+	}
+
+		#SLOVENIA-CONTENT .BOX {
+			width: 65vw;
+			height: auto;
+			margin: 3rem 0vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#SLOVENIA-CONTENT .BOX a, 
+		#SLOVENIA-CONTENT .BOX img {
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+			#SLOVENIA-CONTENT .BOX a:hover,
+			#SLOVENIA-CONTENT .BOX img:hover {
+				opacity: 0.7;
+				transform: scale(0.99);
+			}
+
+			#SLOVENIA-CONTENT .post-image-info {
+				margin-top: 0.5rem;
+				width: 80%;
+				height: auto;
+				font-size: 1.4rem;
+				line-height: 2.0;
+				color: var(--bright-color);	
+			}
+/* ----------------- SLOVENIA-CONTENT ----------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------- carousel----------------- */
+
+	#MAIN-CAROUSEL h5 {
+		font-size: 
+	}
+
+
+/* ----------------- carousel ----------------- */
+
+
+
+
+
+
+/* MEDIA / RESPONZIVE */ 
+
+@media (max-width: 1200px) {
+
+#SLOVENIA-CONTENT .social-media-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;	
+	}
+
+		#SLOVENIA-CONTENT .social-media-box a {
+		margin: 0rem 1rem;
+	}
+
+	
+}
+
+
+@media (max-width: 768px) {
+	#SLOVENIA-CONTENT .BOX {
+			width: 85vw;
+			height: auto;
+			margin: 1rem 0vw;
+		}
+	
+	#HEADER .header-content h1 {
+			color: var(--background-color);
+			font-size: 5rem;
+			letter-spacing: 1px;
+			margin-bottom: 0.5rem;
+		}
+
+	#SLOVENIA-CONTENT .social-media-box {
+		flex-direction: column;	
+	}
+
+		#SLOVENIA-CONTENT .social-media-box a {
+		margin-bottom: 1rem;
+		
+	}
+	
+
+}
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+
+
+/* HEADER */
+	#HEADER .header-content {
+	}
+
+	#HEADER .header-content h1 {
+			font-size: 3.0rem;
+			letter-spacing: 2px;
+		}
+
+	.thin {
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	}
+
+	#HEADER .header-btn {
+			font-size: 1.2rem;
+			padding: 0.6rem 4rem;
+			margin-top: 2rem;
+			letter-spacing: 2px;
+		}
+
+
+
+
+	#NEWEST-POST > h2, #SLOVENIA-CONTENT > h2 {
+		font-size: 1.8rem;
+	}
+
+	#SLOVENIA-CONTENT video {
+		width: 90vw;
+	}
+
+	#SLOVENIA-CONTENT .line-post {
+	    margin: 1.0rem auto;
+	}
+
+	#SLOVENIA-CONTENT .info-text {
+		font-size: 0.80rem;
+		margin: 0rem 1rem;
+	}
+
+	#SLOVENIA-CONTENT .BOX a, 
+	#SLOVENIA-CONTENT .BOX img {
+			width: 70vw;
+		}
+
+	#SLOVENIA-CONTENT .post-image-info {
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+				font-size: 1.0rem;
+				line-height: 1.6;
+				letter-spacing: 1px;
+				text-align: center;
+			}	
+
+
+
+
+	#NEWEST-POST  .line-post {
+		width: 60px;
+	    height: 3px;
+	    margin: 0.5rem auto;
+	}
+
+	#NEWEST-POST .text-head {
+		width: 85%;
+		height: auto;
+		line-height: 1.5;
+		font-size: 1.0rem;
+		margin-bottom: 1.0rem;
+		padding-left: 0;
+		letter-spacing: 0px;
+	}
+
+	#NEWEST-POST .text-container {
+		width: 100%;
+		height: auto;
+		border-left: 0px solid var(--bright-color);	
+	}
+
+		#NEWEST-POST .text-post {
+			width: 85%;
+			line-height: 1.6;
+			font-size: 1.0rem;
+			letter-spacing: 0px;
+		}	
+
+	#SLOVENIA-CONTENT .BOX {
+			width: 90vw;
+			margin: 1rem 0vw;
+		}
+}		
+/* HEADER */
+
